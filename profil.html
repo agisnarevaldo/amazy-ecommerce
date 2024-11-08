@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agisna's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="agisna_header">
+        <div class="agisna_logo">
+            <img src="img/logo.svg"" alt="Agisna's Logo">
+        </div>
+        <nav class="agisna_menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="product.html">Product</a>
+            <a href="contact.html">Contact</a>
+            <a href="testimoni.html">Testimoni</a>
+            <a href="faq.html">FAQ</a>
+            <a href="profil.html">Profil</a>
+        </nav>
+        <button class="agisna_menu_toggle" onclick="toggleNavbar()">☰</button>
+    </header>
+
+    <section class="agisna-user-profile">
+        <div class="agisna-user-profile-card">
+            <h1 class="agisna-profile-title">Profil Pengguna</h1>
+        
+            <div class="agisna-profile-card">
+                <img src="img/profil.png" alt="Foto Pengguna" class="agisna-profile-image">
+                
+                <div class="agisna-profile-info">
+                    <h2 class="agisna-profile-name">Agisna Revaldo</h2>
+                    <p class="agisna-profile-email">agisna@revaldo.com</p>
+                    <p class="agisna-profile-joined">Bergabung sejak: Januari 2024</p>
+                </div>
+        
+                <button class="agisna-profile-edit-btn" onclick="editProfile()">Edit Profil</button>
+            </div>
+        
+            <div class="agisna-profile-actions">
+                <button class="agisna-profile-action-btn">Lihat Pesanan Saya</button>
+                <button class="agisna-profile-action-btn">Keluar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="agisna_footer">
+        <p>&copy; 2024 Agisna Website</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
