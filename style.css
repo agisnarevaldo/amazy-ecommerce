@@ -1,0 +1,719 @@
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Gaegu&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --primary: #9ba4ca;
+    --secondary: #2d3a75;
+    --accent: #4962cf;
+    --background: #0e0f13;
+    --text: #e7e7e9;
+    --boder: rgba(231, 231, 233, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    /* font-family: "Roboto", sans-serif; */
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Inter";
+    font-weight: 700;
+}
+
+html {
+    font-size: 100%;
+}
+
+/* 16px */
+
+h1 {
+    font-size: 4.21rem;
+    /* 67.36px */
+}
+
+h2 {
+    font-size: 3.158rem;
+    /* 50.56px */
+}
+
+h3 {
+    font-size: 2.369rem;
+    /* 37.92px */
+}
+
+h4 {
+    font-size: 1.777rem;
+    /* 28.48px */
+}
+
+h5 {
+    font-size: 1.333rem;
+    /* 21.28px */
+}
+
+section.agisna-contact,
+section.agisna-testimonial,
+section.agisna-faq,
+section.agisna-product,
+section.agisna-user-profile
+{
+    display: flex;
+    padding: 80px 0;
+}
+
+.agisna_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    width: 100%;
+    /* padding: 1rem; */
+    background-color: var(--background);
+    color: var(--text);
+    border-bottom: 1px solid var(--boder);
+}
+
+.agisna_logo {
+    align-content: center;
+    color: var(--text);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    /* padding: 1rem; */
+}
+
+.agisna_logo img{
+    height: 2rem;
+}
+
+.agisna_logo h3 {
+    line-height: 4rem;
+}
+
+.agisna_menu {
+    display: flex;
+    /* gap: 2rem; */
+    /* background-color: var(--secondary); */
+    height: 100%;
+    line-height: 4rem;
+}
+
+.agisna_menu a {
+    color: var(--text);
+    padding: 0 2rem;
+    text-decoration: none;
+    font-size: 1.333rem;
+    /* border: 1px solid var(--text); */
+    border-left: 1px solid var(--boder);
+    transition: all 0.3s ease-in;
+}
+
+.agisna_menu a:hover {
+    /* padding: 0 2.3rem; */
+    background-color: var(--secondary);
+}
+
+section.agisna_hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.agisna_hero_content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 60%;
+}
+
+.agisna-hero-title{
+    color: var(--accent);
+}
+
+.agisna-hero-image {
+    width: 100%;
+    height: 180px;
+    padding: 20px 0;
+}
+
+.agisna-hero-subtitle {
+    max-width: 700px;
+    font-weight: 500;
+}
+
+.agisna-button {
+    background-color: var(--accent);
+    text-decoration: none;
+    color: var(--text);
+    padding: 20px;
+    /* border-radius: 0.5rem; */
+    font-size: 1.333rem;
+    font-weight: 500;
+    border: 2px solid var(--background);
+    box-shadow: 8px 8px 0px var(--secondary);
+    transition: all 0.3s ease-in-out;
+}
+
+.agisna-button:hover {
+    box-shadow: none;
+    /* border-color: var(--background); */
+}
+
+.agisna_footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+    width: 100%;
+    background-color: var(--background);
+    color: var(--text);
+    border-top: 1px solid var(--boder);
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+}
+
+/* Product Page */
+.agisna-products {
+    background-color: var(--background);
+    color: var(--text);
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.agisna-products-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin: 40px 0;
+}
+
+.agisna-product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 40px;
+    padding-bottom: 60px;
+    justify-content: center;
+}
+
+.agisna-product-card {
+    background-color: var(--primary);
+    padding: 40px;
+    border: 4px solid var(--text);
+    box-shadow: 10px 10px 0px var(--secondary);
+    /* Shadow neobrutalism */
+    transition: box-shadow 0.3s ease;
+}
+
+.agisna-product-card:hover {
+    box-shadow: none;
+}
+
+.agisna-product-image {
+    /* width: 50%; */
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    /* border: 2px solid var(--accent); */
+    display: block;
+}
+
+.agisna-product-name {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.agisna-product-description {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 40px;
+}
+
+.agisna-product-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: var(--secondary); */
+}
+
+.agisna-product-price {
+    color: var(--accent);
+}
+
+.agisna-product-cta {
+    width: max-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.agisna-button:hover {
+    box-shadow: none;
+}
+
+/* Contact Page */
+.agisna-contact-card {
+    background-color: var(--background);
+    color: var(--text);
+    padding: 60px 20px;
+    max-width: 700px;
+    height: max-content;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 12px 12px 0px var(--accent);
+    outline: 4px solid var(--accent);
+}
+
+.agisna-contact-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.agisna-contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.agisna-contact-details {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.agisna-contact-details p {
+    font-size: 1rem;
+    color: var(--text);
+    margin: 10px 0;
+}
+
+.agisna-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.agisna-contact-label {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+.agisna-contact-input,
+.agisna-contact-textarea {
+    padding: 12px;
+    background-color: var(--background);
+    color: var(--text);
+    border: 2px solid var(--accent);
+    box-shadow: 8px 8px 0px var(--accent);
+    outline: none;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.agisna-contact-input:focus,
+.agisna-contact-textarea:focus {
+    box-shadow: none;
+}
+
+.agisna-contact-textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.agisna-contact-submit {
+    margin-top: 8px;
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    outline: 3px solid var(--accent);
+    box-shadow: 8px 8px 0px var(--accent);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.agisna-button:hover {
+    box-shadow: none;
+}
+
+/* Testimonial Page */
+.agisna-testimonial-card {
+    background-color: var(--background);
+    color: var(--text);
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 12px 12px 0px var(--accent);
+    outline: 4px solid var(--accent);
+}
+
+.agisna-testimonial-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+.agisna-testimonial-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--background);
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid var(--accent);
+    box-shadow: 8px 8px 0px var(--accent);
+    transition: box-shadow 0.3s ease;
+}
+
+.agisna-testimonial-item:hover {
+    box-shadow: none;
+}
+
+.agisna-testimonial-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid var(--accent);
+    box-shadow: 6px 6px 0px var(--secondary);
+}
+
+.agisna-testimonial-content {
+    text-align: left;
+}
+
+.agisna-testimonial-name {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin: 0;
+}
+
+.agisna-testimonial-review {
+    font-size: 1rem;
+    color: var(--text);
+    margin-top: 5px;
+}
+
+/* faq page */
+.agisna-faq {
+    display: flex;
+    padding: 8rem 0;
+}
+.agisna-faq-card {
+    background-color: var(--background);
+    color: var(--text);
+    padding: 60px 20px;
+    width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    box-shadow: 12px 12px 0px var(--accent);
+    outline: 4px solid var(--accent);
+}
+
+.agisna-faq-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.agisna-faq-item {
+    margin-bottom: 25px;
+    border: 2px solid var(--accent);
+    box-shadow: 8px 8px 0px var(--accent);
+}
+
+.agisna-faq-question {
+    width: 100%;
+    background-color: var(--secondary);
+    color: var(--text);
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.agisna-faq-question:hover {
+    background-color: var(--primary);
+}
+
+.agisna-faq-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.agisna-faq-answer {
+    padding: 15px;
+    font-size: 1rem;
+    color: var(--text);
+    background-color: var(--background);
+    display: none;
+}
+
+/* Profil Page */
+/* Profile Section */
+.agisna-user-profile-card {
+    background-color: var(--background);
+    color: var(--text);
+    padding: 60px 20px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 12px 12px 0px var(--accent);
+    outline: 4px solid var(--accent);
+}
+
+.agisna-profile-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+.agisna-profile-card {
+    background-color: var(--secondary);
+    padding: 20px;
+    border: 2px solid var(--accent);
+    box-shadow: 10px 10px 0px var(--accent);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.agisna-profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid var(--accent);
+    box-shadow: 6px 6px 0px var(--background);
+}
+
+.agisna-profile-info {
+    color: var(--text);
+}
+
+.agisna-profile-name {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin: 5px 0;
+    text-decoration: underline;
+}
+
+.agisna-profile-email,
+.agisna-profile-joined {
+    font-size: 1rem;
+    color: var(--text);
+    margin: 5px 0;
+}
+
+.agisna-profile-edit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--background);
+    border: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--background);
+    transition: box-shadow 0.3s ease;
+}
+
+.agisna-profile-edit-btn:hover {
+    box-shadow: none;
+}
+
+.agisna-profile-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.agisna-profile-action-btn {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: var(--background);
+    border: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--secondary);
+    transition: box-shadow 0.3s ease;
+}
+
+.agisna-profile-action-btn:hover {
+    box-shadow: none;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Untuk layar tablet (maksimal 768px) */
+@media (max-width: 768px) {
+    /* Kontainer teks lebih kecil */
+    .agisna-hero-content,
+    .agisna-products,
+    .agisna-contact-card,
+    .agisna-testimonial-card,
+    .agisna-faq-card,
+    .agisna-user-profile-card {
+        /* width: 90%; */
+        padding: 40px 10px;
+    }
+    
+    /* Font lebih kecil */
+    h1, .agisna-products-title, .agisna-contact-title, .agisna-faq-title, .agisna-profile-title {
+        font-size: 2rem;
+    }
+    h2, .agisna-product-name, .agisna-testimonial-name, .agisna-profile-name {
+        font-size: 1.5rem;
+    }
+
+    /* Grid produk menjadi satu kolom */
+    .agisna-product-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 20px;
+    }
+
+    /* Navigasi lebih kecil dan fleksibel */
+    .agisna_menu a {
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Untuk layar ponsel (maksimal 480px) */
+@media (max-width: 480px) {
+    /* Hero section lebih ramping */
+    .agisna-hero-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Font lebih kecil lagi */
+    h1, .agisna-products-title, .agisna-contact-title, .agisna-faq-title, .agisna-profile-title {
+        font-size: 1.8rem;
+    }
+    h2, .agisna-product-name, .agisna-testimonial-name, .agisna-profile-name {
+        font-size: 1.2rem;
+    }
+
+    /* Gambar profil lebih kecil */
+    .agisna-profile-image, .agisna-testimonial-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Padding lebih kecil untuk tombol dan input */
+    .agisna-button, .agisna-contact-input, .agisna-contact-textarea, .agisna-profile-edit-btn, .agisna-profile-action-btn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Navigasi lebih sederhana */
+    .agisna_menu a {
+        padding: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Kolom produk dan testimoni menjadi full width */
+    .agisna-product-grid, .agisna-testimonial-item {
+        display: block;
+        width: 100%;
+    }
+
+    /* Konten FAQ lebih kecil */
+    .agisna-faq-card {
+        padding: 30px 15px;
+        width: 100%;
+    }
+}
+
+.agisna-menu {
+    display: flex;
+    background-color: var(--background);
+}
+
+.agisna_menu_toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.agisna_menu_toggle:hover {
+    color: var(--primary);
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .agisna_header {
+        padding: 1rem 0.5rem;
+    }
+    .agisna_menu {
+        display: none; /* Hide menu by default on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--background);
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        height: auto;
+    }
+
+    .agisna_menu a {
+        padding: 10px 20px;
+        border-bottom: 1px solid var(--boder);
+        border-top: 1px solid var(--boder);
+        text-align: center;
+        border-left: none;
+    }
+
+    .agisna_menu_toggle {
+        display: block; /* Show toggle button on small screens */
+    }
+
+    /* Show menu when active */
+    .agisna_menu.active {
+        display: flex;
+    }
+
+    .agisna-product-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 20px;
+    }
+}
