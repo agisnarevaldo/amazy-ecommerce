@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazy</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="agisna_header">
+        <div class="agisna_logo">
+            <img src="img/logo.svg"" alt="Agisna's Logo">
+        </div>
+        <nav class="agisna_menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="product.html">Product</a>
+            <a href="contact.html">Contact</a>
+            <a href="testimoni.html">Testimoni</a>
+            <a href="faq.html">FAQ</a>
+            <a href="profil.html">Profil</a>
+        </nav>
+        <button class="agisna_menu_toggle" onclick="toggleNavbar()">☰</button>
+    </header>
+
+    <section class="agisna-contact">
+        <div class="agisna-contact-card">
+            <h1 class="agisna-contact-title">Hubungi Kami</h1>
+            <p class="agisna-contact-description">
+                Jika ada pertanyaan, saran, atau bantuan yang dibutuhkan, silakan
+                hubungi kami melalui form di bawah ini.
+            </p>
+
+            <div class="agisna-contact-details">
+                <p><strong>Email:</strong> support@amazy.com</p>
+                <p><strong>Telepon:</strong> +62 812-3456-7890</p>
+                <p>
+                    <strong>Alamat:</strong> Jl. Peta No.123, Kota Tasikmalaya, Indonesia
+                </p>
+            </div>
+
+            <form action="submit_contact.php" method="post" class="agisna-contact-form">
+                <label for="agisna-name" class="agisna-contact-label">Nama</label>
+                <input type="text" id="agisna-name" name="name" class="agisna-contact-input" required />
+
+                <label for="agisna-email" class="agisna-contact-label">Email</label>
+                <input type="email" id="agisna-email" name="email" class="agisna-contact-input" required />
+
+                <label for="agisna-message" class="agisna-contact-label">Pesan</label>
+                <textarea id="agisna-message" name="message" class="agisna-contact-textarea" required></textarea>
+
+                <button type="submit" class="agisna-button agisna-contact-submit">
+                    Kirim Pesan
+                </button>
+            </form>
+            </d>
+        </div>
+    </section>
+
+    <footer class="agisna_footer">
+        <p>&copy; 2024 Amazy | Built with ☕ by Agisna</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
