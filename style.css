@@ -65,6 +65,10 @@ h5 {
     /* 21.28px */
 }
 
+.agisna-highlight {
+    color: var(--accent);
+}
+
 section.agisna-contact,
 section.agisna-testimonial,
 section.agisna-faq,
@@ -185,10 +189,10 @@ section.agisna_hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: fixed; */
+    font-size: 0.9rem;
     width: 100%;
     background-color: var(--background);
-    color: var(--text);
+    color: var(--boder);
     border-top: 1px solid var(--boder);
     padding: 1rem;
     bottom: 0;
@@ -220,7 +224,7 @@ section.agisna_hero {
 }
 
 .agisna-product-card {
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
     padding: 40px;
     border: 4px solid var(--text);
     box-shadow: 10px 10px 0px var(--secondary);
@@ -646,7 +650,7 @@ section.agisna_hero {
     }
 
     /* Kolom produk dan testimoni menjadi full width */
-    .agisna-product-grid, .agisna-testimonial-item {
+    .agisna-testimonial-item {
         display: block;
         width: 100%;
     }
@@ -680,6 +684,7 @@ section.agisna_hero {
 @media (max-width: 768px) {
     .agisna_header {
         padding: 1rem 0.5rem;
+        position: sticky;
     }
     .agisna_menu {
         display: none; /* Hide menu by default on small screens */
@@ -715,5 +720,9 @@ section.agisna_hero {
         grid-template-columns: 1fr;
         padding: 0;
         gap: 20px;
+    }
+    .agisna_hero_content {
+        width: 100%;
+        padding: 0 20px;
     }
 }
